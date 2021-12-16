@@ -6,6 +6,19 @@
   <router-view />
 </template>
 
+<script lang="ts">
+import { useClient } from "villus";
+
+export default {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  setup() {
+    useClient({
+      url: "http://172.21.1.87:4000/graphql", // your endpoint
+    });
+  },
+};
+</script>
+
 <style lang="scss">
 @import "src/assets/colorpalette";
 

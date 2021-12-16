@@ -1,11 +1,31 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <ul v-if="data">
+      <li v-for="product in data.products" :key="product.name">
+        {{ product._id }}, {{ product.name }}, {{ product.price }}
+      </li>
+    </ul>
+    <ul v-if="data">
+      <li v-for="rating in data.ratings" :key="rating.rating">
+        {{ rating.name }}, {{ rating.description }}, {{ rating.rating }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-class-component";
+import { useQuery } from "villus";
 
-export default class Home extends Vue {}
+export default {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  setup() {
+    const { data } = useQuery({
+      query:
+        "{ products { _id, name, price }, ratings { name, description, rating } }",
+    });
+    return { data };
+  },
+};
 </script>
 
 <style lang="scss">
