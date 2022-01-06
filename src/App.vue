@@ -1,7 +1,11 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <img id="logo" src="@/assets/logo.png" />
+    <div id="nav-menu">
+      <router-link to="/">Startseite</router-link>
+      <router-link to="/inventory">Katalog</router-link>
+      <router-link to="/about">Über uns</router-link>
+    </div>
   </div>
   <router-view />
 </template>
@@ -13,32 +17,59 @@ export default {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   setup() {
     useClient({
-      url: "http://172.21.1.87:4000/graphql", // your endpoint
+      url: "http://162.55.3.93:4000/graphql",
     });
   },
 };
 </script>
 
 <style lang="scss">
-@import "src/assets/colorpalette";
+@import "@/assets/colorpalette";
 
-#app {
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 115%;
+}
+
+.app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: $color3;
+  color: $color1;
 }
 
 #nav {
-  padding: 30px;
+  background: adjust-color($color2, $alpha: -0.4);
+  position: fixed;
+  min-width: 100%;
+  min-height: max-content;
+  left: 0px;
+  top: 0px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  #logo {
+    height: 60px;
+    float: left;
+  }
 
-    &.router-link-exact-active {
-      color: #42b983;
+  #nav-menu {
+    height: 20px;
+    float: right;
+    padding: 20px 40px;
+
+    a {
+      font-family: Arvo sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 17px;
+      color: #ffffff;
+      padding: 0px 10px;
+
+      &.router-link-exact-active {
+        color: #42b983;
+      }
     }
   }
 }

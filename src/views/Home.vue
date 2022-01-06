@@ -1,33 +1,15 @@
 <template>
   <div class="home">
-    <ul v-if="data">
-      <li v-for="product in data.products" :key="product.name">
-        {{ product._id }}, {{ product.name }}, {{ product.price }}
-      </li>
-    </ul>
-    <ul v-if="data">
-      <li v-for="rating in data.ratings" :key="rating.rating">
-        {{ rating.name }}, {{ rating.description }}, {{ rating.rating }}
-      </li>
-    </ul>
+    <h1>AGL-Computer</h1>
   </div>
 </template>
 
-<script lang="ts">
-import { useQuery } from "villus";
+<script lang="ts"></script>
 
-export default {
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-  setup() {
-    const { data } = useQuery({
-      query:
-        "{ products { _id, name, price }, ratings { name, description, rating } }",
-    });
-    return { data };
-  },
-};
-</script>
-
-<style lang="scss">
+<style lang="scss" scoped>
 @import "src/assets/colorpalette";
+
+.home {
+  background: $color3;
+}
 </style>
