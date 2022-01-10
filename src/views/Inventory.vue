@@ -1,10 +1,10 @@
 <template>
   <div class="inventory">
-      <ul v-if="data">
-        <li v-for="product in data.products" :key="product.name">
-            {{ product.name }}, {{ product.price }}
-        </li>
-      </ul>
+    <ul v-if="data">
+      <li v-for="product in data.products" :key="product.name">
+        {{ product.name }}, {{ product.price }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -15,8 +15,7 @@ export default {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   setup() {
     const { data } = useQuery({
-      query:
-        "{ products { name, price } }",
+      query: "{ products { name, price } }",
     });
     return { data };
   },
