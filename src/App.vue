@@ -34,9 +34,7 @@ body {
 }
 
 .app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arvo, sans-serif;
   color: $color1;
 }
 
@@ -59,16 +57,15 @@ body {
     padding: 20px 40px;
 
     a {
-      font-family: Arvo sans-serif;
+      color: #ffffff;
       font-weight: 700;
       text-decoration: none;
       font-size: 14px;
       line-height: 17px;
-      color: #ffffff;
       padding: 0px 10px;
 
       &.router-link-exact-active {
-        color: #42b983;
+        color: $color2;
       }
     }
   }
