@@ -1,7 +1,7 @@
 <template>
   <div class="inventory">
-    <ul v-if="data">
-      <li v-for="product in data.products" :key="product._id">
+    <ul v-if="products">
+      <li v-for="product in products" :key="product._id">
         <img
           v-if="product.image"
           id="image"
@@ -20,12 +20,23 @@
 import { useQuery } from "villus";
 
 export default {
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-  setup() {
-    const { data } = useQuery({
-      query: "{ products { _id, name, price, image } }",
-    });
-    return { data };
+  data() {
+    return {
+      loading: false,
+      error: null,
+      products: null,
+    };
+  },
+  methods: {
+    fetchData() {
+      useQuery({
+        query: "{ products { _id, name, price, image } }",
+      })
+        .execute()
+        .then((response) => {
+          this.data.products = response.data;
+        });
+    },
   },
 };
 </script>
