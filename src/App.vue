@@ -7,6 +7,9 @@
       <router-link to="/about">Über uns</router-link>
     </div>
   </div>
+  <div id="header">
+    <h1>Header</h1>
+  </div>
   <router-view />
 </template>
 
@@ -30,7 +33,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 115%;
 }
 
 .app {
@@ -69,5 +71,14 @@ body {
       }
     }
   }
+}
+
+#header {
+  height: 500px;
+  background: $color3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 </style>
