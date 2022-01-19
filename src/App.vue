@@ -1,14 +1,11 @@
 <template>
   <div id="nav">
-    <img id="logo" src="@/assets/logo.png" />
+    <h2 id="title">AGL-Computer</h2>
     <div id="nav-menu">
-      <router-link to="/">Startseite</router-link>
-      <router-link to="/inventory">Katalog</router-link>
-      <router-link to="/about">Über uns</router-link>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/inventory">Products</router-link>
     </div>
-  </div>
-  <div id="header">
-    <h1>Header</h1>
   </div>
   <router-view />
 </template>
@@ -29,56 +26,59 @@ export default {
 <style lang="scss">
 @import "@/assets/colorpalette";
 
-html,
-body {
+* {
   margin: 0;
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+body,
+html {
+  height: 100%;
+}
+
 .app {
   font-family: Arvo, sans-serif;
-  color: $color1;
+  color: $color2;
+  height: 100%;
+  z-index: 0;
 }
 
 #nav {
-  background: adjust-color($color2, $alpha: -0.4);
   position: fixed;
-  min-width: 100%;
-  min-height: max-content;
-  left: 0px;
-  top: 0px;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  padding: 20px;
+  background: $color3;
 
-  #logo {
-    height: 60px;
+  #title {
     float: left;
   }
 
   #nav-menu {
-    height: 20px;
     float: right;
-    padding: 20px 40px;
 
     a {
-      color: #ffffff;
-      font-weight: 700;
+      margin: 0px 29px;
+      padding: 2px 1px;
+      text-transform: uppercase;
+      color: white;
       text-decoration: none;
-      font-size: 14px;
-      line-height: 17px;
-      padding: 0px 10px;
 
       &.router-link-exact-active {
+        color: $color2;
+        border-bottom: 3px solid white;
+      }
+
+      &:hover {
         color: $color2;
       }
     }
   }
-}
-
-#header {
-  height: 500px;
-  background: $color3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 </style>

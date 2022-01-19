@@ -7,15 +7,16 @@
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-class-component";
+import { Vue, prop } from "vue-class-component";
 
-export default class ItemList extends Vue {
-    data() {
-        return {
-            list: {}
-        }
-    }
+class Props {
+  list = prop({
+    type: String,
+    required: true,
+  });
 }
+
+export default class ItemList extends Vue.with(Props) {}
 </script>
 
 <style scoped lang="scss"></style>
