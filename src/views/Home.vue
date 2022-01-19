@@ -13,7 +13,7 @@
 
 <script lang="ts"></script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "src/assets/colorpalette";
 
 .home {
