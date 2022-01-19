@@ -1,5 +1,5 @@
 <template>
-  <Header title="Übers uns."></Header>
+  <Header title="Über uns."></Header>
   <div class="about">
     <Contact></Contact>
   </div>
