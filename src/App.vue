@@ -54,7 +54,7 @@ html {
   top: 0;
   z-index: 1;
   padding: 20px;
-  background: $color3;
+  background: change-color($color3, $alpha: 0.6);
 
   #title {
     float: left;
