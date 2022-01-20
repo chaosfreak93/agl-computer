@@ -45,7 +45,6 @@ html {
   font-family: Arvo, sans-serif;
   color: $color2;
   height: 100%;
-  z-index: 0;
 }
 
 #nav {
