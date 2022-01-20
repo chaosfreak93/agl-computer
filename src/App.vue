@@ -18,6 +18,7 @@ export default {
   setup() {
     useClient({
       url: "http://162.55.3.93:4000/graphql",
+      cachePolicy: "network-only",
     });
   },
 };
