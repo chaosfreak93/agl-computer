@@ -16,5 +16,5 @@ export default class Home extends Vue {}
 </script>
 
 <style lang="scss">
-@import "src/assets/colorpalette";
+@import "@/assets/theme";
 </style>

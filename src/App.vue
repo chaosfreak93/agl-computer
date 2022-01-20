@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/colorpalette";
+@import "@/assets/theme";
 
 * {
   margin: 0;

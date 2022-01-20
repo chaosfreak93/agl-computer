@@ -22,4 +22,6 @@ import { Vue } from "vue-class-component";
 export default class Contact extends Vue {}
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@import "@/assets/theme";
+</style>

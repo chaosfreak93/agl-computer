@@ -18,3 +18,7 @@ import Header from "@/components/Header.vue";
 })
 export default class About extends Vue {}
 </script>
+
+<style lang="scss">
+@import "@/assets/theme";
+</style>

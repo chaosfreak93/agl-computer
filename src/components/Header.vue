@@ -23,7 +23,7 @@ export default class Header extends Vue.with(Props) {}
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/colorpalette";
+@import "@/assets/theme";
 
 .header {
   position: relative;
