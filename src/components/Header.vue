@@ -86,6 +86,7 @@ export default class Header extends Vue.with(Props) {}
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 5vh;
 }
 
 #down {
@@ -94,6 +95,6 @@ export default class Header extends Vue.with(Props) {}
   top: 95%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
-  font-size: 40px;
+  font-size: 4vh;
 }
 </style>
