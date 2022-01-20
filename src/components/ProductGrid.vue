@@ -11,7 +11,7 @@
         :src="this.$store.state.cdnUrl + 'products/' + product.image"
       />
       <div id="name">{{ product.name }}</div>
-      <div id="price">{{ product.price }}</div>
+      <div id="price">{{ product.price }}€</div>
     </div>
   </div>
 </template>
@@ -36,8 +36,9 @@ export default {
 .productlist {
   display: grid;
   gap: 15px;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 160px 160px 160px 160px;
+  grid-template-columns: 200px 200px 200px 200px 200px 200px;
+  grid-auto-rows: 280px;
+  justify-content: center;
 }
 
 #product {
@@ -45,21 +46,35 @@ export default {
   position: relative;
   border: 1px $color3 solid;
   border-radius: 5px;
-  box-shadow: 2px 3px 3px change-color($color1, $alpha: 0.6);
-  padding: 10px;
+  box-shadow: 2px 2px 4px change-color($color1, $alpha: 0.5);
+  align-content: center;
 
   #image {
-    width: 64px;
-    height: 64px;
     position: absolute;
+    width: 160px;
+    height: 160px;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
 
   #name {
     position: absolute;
+    width: 180px;
+    height: 40px;
+
+    text-align: center;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
 
   #price {
     position: absolute;
+    text-align: center;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
 }
 </style>
