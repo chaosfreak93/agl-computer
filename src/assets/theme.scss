@@ -6,3 +6,12 @@
 $color1: #99ff00;
 $color2: #001aff;
 $color3: #bdbfbf;
+
+@mixin multiline-wrap {
+    text-overflow:ellipsis;
+    overflow:hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
