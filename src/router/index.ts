@@ -4,17 +4,17 @@ import Home from "../views/Home.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "Startseite",
+    name: "Home",
     component: Home,
   },
   {
-    path: "/inventory",
-    name: "Katalog",
-    component: () => import("../views/Inventory.vue"),
+    path: "/products",
+    name: "Products",
+    component: () => import("../views/Products.vue"),
   },
   {
     path: "/about",
-    name: "Über uns",
+    name: "About",
     component: () => import("../views/About.vue"),
   },
 ];
