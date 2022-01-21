@@ -62,7 +62,7 @@ export default {
     position: absolute;
     width: 180px;
     height: 40px;
-
+    @include multiline-wrap;
     text-align: center;
     bottom: 15%;
     left: 50%;
