@@ -28,6 +28,7 @@ export default {
 @import "@/assets/theme";
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -39,6 +40,7 @@ export default {
 body,
 html {
   height: 100%;
+  width: 100%;
 }
 
 .app {
