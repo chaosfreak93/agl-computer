@@ -28,7 +28,6 @@ export default {
 @import "@/assets/theme";
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -47,38 +46,38 @@ html {
   font-family: Arvo, sans-serif;
   color: $color2;
   height: 100%;
-}
 
-#nav {
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  padding: 20px;
-  background: change-color($color3, $alpha: 0.6);
+  #nav {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    padding: 20px;
+    background: change-color($color3, $alpha: 0.6);
 
-  #title {
-    float: left;
-  }
+    #title {
+      float: left;
+    }
 
-  #nav-menu {
-    float: right;
+    #nav-menu {
+      float: right;
 
-    a {
-      margin: 0px 29px;
-      padding: 2px 1px;
-      text-transform: uppercase;
-      color: white;
-      text-decoration: none;
+      a {
+        margin: 0px 29px;
+        padding: 2px 1px;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
 
-      &.router-link-exact-active {
-        color: $color2;
-        border-bottom: 3px solid white;
-      }
+        &.router-link-exact-active {
+          color: $color2;
+          border-bottom: 3px solid white;
+        }
 
-      &:hover {
-        color: $color2;
+        &:hover {
+          color: $color2;
+        }
       }
     }
   }

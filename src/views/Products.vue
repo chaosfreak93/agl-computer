@@ -23,7 +23,6 @@ export default class Products extends Vue {}
 @import "@/assets/theme";
 
 .products {
-  display: block !important;
   background: $color3;
   width: 100%;
 }
