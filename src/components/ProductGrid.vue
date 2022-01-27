@@ -1,13 +1,13 @@
 <template>
   <div class="productlist" v-if="allProducts">
     <div
-      id="product"
+      id="productbox"
       v-for="product in allProducts.products"
       :key="product._id"
     >
       <img
-        v-if="product.image"
         id="image"
+        v-if="product.image"
         :src="this.$store.state.cdnUrl + 'products/' + product.image"
       />
       <div id="name">{{ product.name }}</div>
@@ -35,46 +35,21 @@ export default {
 
 .productlist {
   display: grid;
-  gap: 15px;
-  grid-template-columns: 200px 200px 200px 200px 200px 200px;
-  grid-auto-rows: 280px;
+  gap: 10px;
+  grid-template-columns: 25% 25% 25%;
+  grid-auto-rows: 300px;
   justify-content: center;
-}
 
-#product {
-  background: white;
-  position: relative;
-  border: 1px $color3 solid;
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px change-color($color1, $alpha: 0.5);
-  align-content: center;
+  #productbox {
+    #image {
+      height: 50px;
+    }
 
-  #image {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
+    #name {
+    }
 
-  #name {
-    position: absolute;
-    width: 180px;
-    height: 40px;
-    @include multiline-wrap;
-    text-align: center;
-    bottom: 15%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
-
-  #price {
-    position: absolute;
-    text-align: center;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    #price {
+    }
   }
 }
 </style>

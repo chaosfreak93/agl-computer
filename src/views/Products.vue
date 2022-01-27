@@ -24,5 +24,6 @@ export default class Products extends Vue {}
 
 .products {
   background: $color3;
+  width: 100%;
 }
 </style>

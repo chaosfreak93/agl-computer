@@ -1,6 +1,6 @@
 {
   "name": "agl-computer",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "author": "Yan-Luca L.",
   "scripts": {
@@ -9,10 +9,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.20.2",
+    "core-js": "^3.20.3",
     "graphql": "^16.2.0",
     "villus": "^1.0.1",
-    "vue": "^3.2.26",
+    "vue": "^3.2.29",
     "vue-class-component": "^8.0.0-rc.1",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
@@ -26,17 +26,17 @@
     "@vue/cli-plugin-typescript": "~4.5.15",
     "@vue/cli-plugin-vuex": "~4.5.15",
     "@vue/cli-service": "~4.5.15",
-    "@vue/compiler-sfc": "^3.2.26",
+    "@vue/compiler-sfc": "^3.2.29",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-vue": "^7.20.0",
-    "lint-staged": "^12.1.7",
+    "lint-staged": "^12.3.1",
     "prettier": "^2.5.1",
-    "sass": "^1.48.0",
-    "sass-loader": "^10.2.0",
-    "typescript": "~4.5.4"
+    "sass": "^1.49.0",
+    "sass-loader": "^10.2.1",
+    "typescript": "~4.5.5"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
