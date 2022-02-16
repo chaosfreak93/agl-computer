@@ -1,0 +1,31 @@
+<template>
+  <Header title="Über uns."></Header>
+  <div class="about">
+    <Contact></Contact>
+  </div>
+</template>
+
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+import Contact from "@/components/Contact.vue";
+import Header from "@/components/Header.vue";
+
+@Options({
+  components: {
+    Header,
+    Contact,
+  },
+})
+export default class About extends Vue {}
+</script>
+
+<style lang="scss">
+@import "@/assets/theme";
+
+.about {
+  display: flex;
+  background: $color3;
+  width: 100%;
+  justify-content: center;
+}
+</style>
